@@ -15,7 +15,7 @@ tag_re = re.compile(r'(<!--.*?-->|<[^>]*>)')
 st.title("Welcome to APS Jaipur")
 st.subheader("Check your Stress level")
 
-df = pd.read_csv("e:/Projects/checkstress/upload.csv", na_values=['NAN']) 
+df = pd.read_csv("upload.csv", na_values=['NAN']) 
 
 
 if 'stresslevel' not in st.session_state:
