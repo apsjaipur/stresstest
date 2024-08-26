@@ -73,11 +73,6 @@ Conflicts=Conflicts.strip()
 col1,col2 = st.columns(2)
 col1.title('Stress Level:')
 
-if isinstance(st.session_state.stresslevel, str):
-    col2.title(st.session_state.stresslevel)
-if submit:
-    st.rerun()
-    #getstresslevel()
     
 i=0
 for i in range(213):
@@ -148,7 +143,11 @@ for i in range(213):
             st.session_state.stresslevel = "-------"
     
 
-
+if isinstance(st.session_state.stresslevel, str):
+    col2.title(st.session_state.stresslevel)
+if submit:
+    st.rerun()
+    #getstresslevel()
 
 
 
