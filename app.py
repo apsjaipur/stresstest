@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import re, html
-from tkinter import *
 
 if 'clicked' not in st.session_state:
     st.session_state.clicked = False
