@@ -21,7 +21,11 @@ df = pd.read_csv("upload.csv", na_values=['NAN'])
 if 'stresslevel' not in st.session_state:
     st.session_state.stresslevel = ''
 
-
+if isinstance(st.session_state.stresslevel, str):
+    col2.title(st.session_state.stresslevel)
+if submit:
+    st.rerun()
+    #getstresslevel()
 
 with st.form('stress'):
     Gender = st.selectbox('Gender', ['Male ','Female'])
@@ -145,11 +149,7 @@ for i in range(213):
     
 
 
-if isinstance(st.session_state.stresslevel, str):
-    col2.title(st.session_state.stresslevel)
-if submit:
-    st.rerun()
-    #getstresslevel()
+
 
 
 
